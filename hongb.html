@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  3333333
+</body>
+<!-- script加载 -->
+<!-- <script>
+  let script = document.createElement('script');
+  script.src = "./t2.js";
+
+  document.head.append(script);
+
+  script.onload = function () {
+    // 该脚本创建了一个变量 "_"
+    alert(window.abc); // 显示库的版本
+  };
+
+</script> -->
+<!-- es module加载 -->
+<!-- <script type="module">
+  import { a } from './t2.js'
+
+  alert(a)
+</script> -->
+
+<!-- 异步esmodule引入 -->
+<script>
+  import('./t2.js').then(({ a }) => {
+    // 异步引入es模块
+    alert(a)
+    // debugger
+  })
+
+</script>
+
+</html>
